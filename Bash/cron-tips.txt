@@ -1,0 +1,14 @@
+# If a Conda environment is failing to activate while running a script, you can try to activate the environment manually before running the script.
+
+source /home/User/miniforge3/etc/profile.d/conda.sh
+conda activate your_env 
+python your_script.py
+
+# Or you can use "conda run" to run the script with the environment activated:
+
+conda run -n your_env python your_script.py
+
+# Or directly in Cron:
+
+* * * * * /home/User/miniforge3/bin/conda run -n your_env python /path/to/script.py
+
