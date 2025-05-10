@@ -1,0 +1,10 @@
+# Exporting a conda environment to a YAML file
+
+#### Exporting the current environment
+
+conda env export | grep -v "^prefix: " > environment.yml
+
+#### Exporting the current environment without build numbers
+
+conda env export --no-builds | grep -v "^prefix: " > environment.yml
+
